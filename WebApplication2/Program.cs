@@ -18,10 +18,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseDefaultFiles();
+app.UseDefaultFiles();       //Ha nincs semmi a domain tuán, akkor az index.html-t tölti
+app.MapControllers();        //Az API Controllereket elérhetõvé teszi
 app.UseStaticFiles();
-app.UseAuthorization();
 
-app.MapControllers();
+
 
 app.Run();
+
